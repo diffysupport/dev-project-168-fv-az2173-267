@@ -1,23 +1,18 @@
 basic:
-    name: test
+    name: 'Demo test project'
     breakpoints:
         - 640
-        - 720
+        - 1024
         - 1200
-        - 101
-        - 999
-        - 202
-        - 98
     pages:
+        - 'https://bbc.com'
         - 'https://point.md'
-        - 'https://point.md/ru/novosti/politika'
-        - 'https://point.md/ru/novosti/ekonomika'
     monitoring:
         days: {  }
         type: daily
-        schedule_time: '02:30 AM'
-        schedule_time_zone: Europe/Dublin
-        compare_with: last
+        schedule_time: '01:30 AM'
+        schedule_time_zone: Europe/London
+        compare_with: last-production
         compare_with_fresh: production
 advanced:
     mask: ''
@@ -25,14 +20,20 @@ advanced:
     isolate: ''
     delay: 10
     scroll: false
-    headers: ''
+    headers:
+        - { value: '', header: '' }
     cookies: ''
     custom_js: ''
     custom_css: ''
     mock_content: ''
+    sensitivity: 15
+    night_mode: ''
+    retina_images: ''
     performance:
         workers_production: 30
         workers_nonproduction: 10
         workers_production_delay: 0
         workers_nonproduction_delay: 0
     stabilize: true
+proxy: false
+type: multiple-sites
